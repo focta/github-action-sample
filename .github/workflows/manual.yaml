@@ -1,6 +1,7 @@
 name: Manual
 on:
   workflow_dispatch:
+  # Actionの開始時に引数を受け取れるように設定できる。
     inputs:
       greeting:
         type: string
@@ -11,5 +12,5 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{  input.greeting }}"
+      - run: echo "${{  inputs.greeting }}"
 
